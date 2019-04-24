@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+	<head>
+		<title>Saber vs Shike</title>
+		<meta charset = "utf-8">
+	</head>
+	<body>
+		<script>
+			const personagem = {
+				saber: {
+					name: "saber",
+					hp: 1000,
+					mp: 500,
+					poderNormal: 100,
+					poderEspecial: 400,
+					powerName: "Excalibur!!",
+					defesa: "./sprites/saber-defende.png",
+					ataque: "./sprites/saber-ataque.png",
+					normal: "./sprites/saber-normal.png"
+				},
+				shiki: {
+					name: "shiki",
+					hp: 800,
+					mp: 250,
+					poderNormal: 200,
+					poderEspecial: 500,
+					powerName: "Estocada!",
+					defesa: "./sprites/shiki-defende.png",
+					ataque: "./sprites/shiki-ataque.png",
+					normal: "./sprites/shiki-normal.png"
+				}
+			}
+			const combate = (hpAlvo, ataque) => hpAlvo - ataque
+			const juiz = (hpAlvo) => hpAlvo <= 0 ? true : false
+			if (juiz(combate(personagem.shiki.hp, personagem.saber.poderNormal))) console.log("shiki morreu")
+			else console.log("shiki sobreviveu ao ataque")
+
+		</script>
+	</body>
+</html>
